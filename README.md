@@ -7,8 +7,8 @@ Thanks to https://github.com/robotframework/PythonRemoteServer for the example a
 I've tested this project on a Linux virtual machine running on Windows as the host and a Raspberry PI 3
 running Ubuntu Mate as the target.
 
-SETUP and RUNNING
-
+# SETUP and RUNNING
+```
 - Make sure your target has the 'daemon' utility. On Ubuntu: sudo apt-get install daemon
 
 - Target must be setup to run an SSH server and accept ssh connections (https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
@@ -34,4 +34,4 @@ are located 'server.py' and libraries on the target device (it's under the clone
 
 - or manually with something like:
     pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host
-
+```
