@@ -1,5 +1,6 @@
-Install the files in this folder on your target. The default where you should install them is /opt/robot/my-project.
-If you're starting manually starting the server on the target, you might have to export PYTHONPATH as in:
+Install the files in this folder on your target.
+
+If you're manually starting the server on the target, you might have to export PYTHONPATH as in:
 
 export PYTHONPATH=$PYTHONPATH:/opt/robot/my-project
 
