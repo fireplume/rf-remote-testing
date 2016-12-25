@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     args    = parse_cmd_line()
 
-    current_port = args.start_port
+    current_port = int(args.start_port)
 
     for library in REMOTE_LIB_LIST:
         uri = "%s:%d" % (args.server_ip, current_port)
