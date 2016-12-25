@@ -19,3 +19,14 @@ class common_services(_common_a, _common_b):
 
     def common(self):
         return "common called!"
+
+    def get_keyword_names(self):
+        return ['common', 'feature_a', 'feature_b']
+
+    def get_keyword_documentation(self, name):
+        if name == "common":
+            return "Dumb common library keyword"
+        elif name == "feature_a":
+            return "Dumb base class library keyword"
+        elif name == "feature_b":
+            return "Dumb base class library keyword"

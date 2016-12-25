@@ -1,15 +1,15 @@
 # Set MYPROJECT_HOME to where all your libraries are on your HOST (not the target)
-export MYPROJECT_HOME=`pwd`
+export MYPROJECT_HOME=`pwd`/host
 
 
 # Comment/Uncomment the following pybot command line to see its impact
 
 
 # Modify the following line to set the proper IP address and port of your target
-pybot -d results -v server_uri:192.168.0.122 -v start_port:8270 test_remote_target.robot
+pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host
 
-# If you've modified the source code, you may want to skip the arguments
-# pybot -d results test_remote_target.robot
+# If you've modified the source code with your custom server IP and port, you may want to skip the arguments
+# pybot -d results host
 
 # The following will run the suite without the expected failing test case
-# pybot -e xfail -d results test_remote_target.robot
+# pybot -e xfail -d results host
