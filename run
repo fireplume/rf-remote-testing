@@ -5,10 +5,10 @@ export MYPROJECT_HOME=`pwd`/host
 # Comment/Uncomment the following pybot command line to see its impact
 
 
-# Modify the following line to set the proper IP address and port of your target
+# Modify the following line to set the proper username, IP address and starting port index for your target.
 pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host
 
-# If you've modified the source code with your custom server IP and port, you may want to skip the arguments
+# If you've modified the source code (host/__init__.py) with your custom username, IP address and port, you may want to skip the arguments.
 # pybot -d results host
 
 # The following will run the suite without the expected failing test case

@@ -1,4 +1,4 @@
-import os 
+import os
 import sys
 import argparse
 import importlib
@@ -13,20 +13,15 @@ from robotremoteserver import RobotRemoteServer
 
 # Add new libraries to this list. Note that they must be listed in the same order as
 # in "set_remote_lib_uris.py" since the port is assigned incrementally depending on
-# that ordering. So target will be assigned the first port and so on.
+# that ordering. So  the "target" lib will be assigned the first port and so on.
 REMOTE_LIB_LIST = ["target", "common_services", "security_services"]
-
-# If you have reserved IP address and port for your target, you 
-# can override these, otherwise, use the command line options.
-PORT            = 8270
-SERVER_IP       = '192.168.0.122'
 
 def parse_cmd_line():
     parser = argparse.ArgumentParser(description="Utility to start RobotRemoteServers for myproject")
 
     parser.add_argument('op',         choices=['start', 'stop', 'test'], help="Start, stop or test for servers running.")
-    parser.add_argument('server_ip',  nargs='?', default=SERVER_IP,      help="Server IP address")
-    parser.add_argument('start_port', nargs='?', default=PORT,           help="Starting port to listent to, defaults to %d" % PORT)
+    parser.add_argument('server_ip',  help="Server IP address.")
+    parser.add_argument('start_port', help="Starting port index for first library.")
 
     args = parser.parse_args()
 
@@ -51,7 +46,7 @@ if __name__ == "__main__":
                 try:
                     RobotRemoteServer(class_(), host=args.server_ip, port=current_port)
                 except Exception as e:
-                    print("Failed to start %s or address already in use." % library)
+                    raise Exception("Failed to start %s or address already in use." % library)
                 sys.exit(0)
 
         elif args.op == "stop":
