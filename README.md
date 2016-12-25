@@ -7,6 +7,8 @@ Thanks to https://github.com/robotframework/PythonRemoteServer for the example a
 I've tested this project on a Linux virtual machine running on Windows as the host and a Raspberry PI 3
 running Ubuntu Mate as the target.
 
+__!!! Don't pull releases v1.0 and v1.1 as they are broken !!!__
+
 # SETUP and RUNNING
 ```
 - Make sure your target has the 'daemon' utility. On Ubuntu: sudo apt-get install daemon
