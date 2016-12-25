@@ -1,0 +1,9 @@
+*** Settings ***
+Documentation   Getting remote libraries "target", "common" and "security" into scope
+...             using set_remote_lib_uris.py
+
+Variables       %{MYPROJECT_HOME}/set_remote_lib_uris.py      ${server_uri}     ${start_port}
+
+Library         Remote    ${target_uri}     WITH NAME         target
+Library         Remote    ${common_uri}     WITH NAME         common
+Library         Remote    ${security_uri}   WITH NAME         security
