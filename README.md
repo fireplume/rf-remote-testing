@@ -1,6 +1,6 @@
-At work, we've been using remote robot framework libraries to test our targets. I've never really known
-how it was working, so I thought I'd figure it out by myself by creating a template framework from
-which anybody could easily create a remote testing environment.
+# Robot Framework remote target testing framework
+
+At work, we've been using remote robot framework libraries to test our targets. I was curious about how it works, so I thought I'd figure it out creating a template framework from which anybody could easily create a remote testing environment.
 
 Thanks to https://github.com/robotframework/PythonRemoteServer for the example and remote server library.
 
@@ -9,7 +9,7 @@ running Ubuntu Mate as the target.
 
 __!!! Don't pull releases v1.0 and v1.1 as they are broken !!!__
 
-# SETUP and RUNNING
+## SETUP
 
 - Install Robot Framework and the PythonRemoteServer on your host (http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#installation-instructions, https://github.com/robotframework/PythonRemoteServer)
 
@@ -33,7 +33,13 @@ are located 'server.py' and libraries on the target device (it's under the clone
     - start_port:8270              Replace '8270' with the starting port index range you want to assign to the
                                    remote library servers.
 
-- Run with one of:
+## RUNNING
+- In the host project's root directory, run with one of:
     - . run
-    - pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host
+    - pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host # adapt to your environment
 
+## ADDING LIBRARIES
+If you want to add libraries, inspect and modify the following files:
+- target/server.py
+- host/remote_libraries.txt
+- host/set_remote_lib_uris.py
