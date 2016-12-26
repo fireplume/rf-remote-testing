@@ -1,4 +1,4 @@
-# Robot Framework remote target testing framework
+# Robot Framework remote target testing using remote libraries
 
 At work, we've been using remote robot framework libraries to test our targets. I was curious about how it works, so I thought I'd figure it out creating a template framework from which anybody could easily create a remote testing environment.
 
