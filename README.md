@@ -11,6 +11,8 @@ __!!! Don't pull releases v1.0 and v1.1 as they are broken !!!__
 
 # SETUP and RUNNING
 
+- Install Robot Framework and the PythonRemoteServer on your host (http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#installation-instructions, https://github.com/robotframework/PythonRemoteServer)
+
 - Make sure your target has the 'daemon' utility. On Ubuntu: sudo apt-get install daemon
 
 - Target must be setup to run an SSH server and accept ssh connections (https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
