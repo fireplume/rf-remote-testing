@@ -1,6 +1,6 @@
 # Robot Framework remote target testing using remote libraries
 
-At work, we've been using remote robot framework libraries to test our targets. I was curious about how it works, so I thought I'd figure it out creating a template framework from which anybody could easily create a remote testing environment.
+A template framework from which anybody could easily create a remote testing environment. This project is about launching a test suite on the host which will start a remote library server on the target, connect to it and run library keywords on that target directly.
 
 Thanks to https://github.com/robotframework/PythonRemoteServer for the example and remote server library.
 
@@ -38,8 +38,13 @@ are located 'server.py' and libraries on the target device (it's under the clone
     - . run
     - pybot -d results -v uname:plume -v server_uri:192.168.0.122 -v start_port:8270 host # adapt to your environment
 
-## ADDING LIBRARIES
-If you want to add libraries, inspect and modify the following files:
-- target/server.py
-- host/remote_libraries.txt
-- host/set_remote_lib_uris.py
+## TINKERING WITH THE LIBRARIES
+If you want to add, remove or modify the libraries, inspect and modify the following files:
+- Library management:
+    - target/server.py
+    - host/remote_libraries.txt
+    - host/set_remote_lib_uris.py
+- The test itself:
+    - host/test_remote_target.robot
+- Current libraries:
+    - target/{common_services.py,security_services.py,target.py}
