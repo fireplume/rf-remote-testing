@@ -2,7 +2,7 @@
 
 if [[ $# != 1 ]]; then
     echo "Usage: $0 target_lib_path"
-    echo "__init__.py needs to be configured with the remote target library install path."
+    echo "__init__.robot needs to be configured with the remote target library install path."
     echo "That is the absolute path where 'server.py' and libraries are found."
     exit 0
 fi
