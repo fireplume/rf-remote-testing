@@ -1,11 +1,14 @@
 # Robot Framework remote target testing using remote libraries
 
-A template framework from which anybody could easily create a remote testing environment. This project is about launching a test suite on the host which will start a remote library server on the target, connect to it and run library keywords on that target directly.
+A template framework from which anybody could easily create a remote testing environment. This project is about launching a test suite on the host which will start a remote library server on the target, connect to it and run library keywords on the target. The Robot Framework keywords allow, amongst other things, to execute binaries directly on the target.
 
 Thanks to https://github.com/robotframework/PythonRemoteServer for the example and remote server library.
 
 I've tested this project on a Linux virtual machine running on Windows as the host and a Raspberry PI 3
 running Ubuntu Mate as the target.
+
+## Inspiration
+Some time ago, at work, we had to test remote targets, cell phones. We opted for Robot Framework. I was not personally involved in the setup of that environment, but I was curious to see if I could reproduce it on my own, which is what this project is about. It allows to run tests locally on the target from a remote host and to generate a detailed report of the outcome. For more information on Robot Framework, see http://robotframework.org/.
 
 __!!! Don't pull releases v1.0 and v1.1 as they are broken !!!__
 
